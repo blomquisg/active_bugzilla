@@ -8,7 +8,8 @@ Gem::Specification.new do |spec|
     "Joe VLcek"        => "jvlcek@redhat.com",
     "Jason Frey"       => "jfrey@redhat.com",
     "Oleg Barenboim"   => "chessbyte@gmail.com",
-    "Alberto Bellotti" => "abellott@redhat.com"
+    "Alberto Bellotti" => "abellott@redhat.com",
+    "Greg Blomquist"   => "gblomqui@redhat.com"
   }
 
   spec.name          = "active_bugzilla"
