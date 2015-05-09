@@ -7,10 +7,7 @@ module ActiveBugzilla::Bug::FlagsManagement
   module ClassMethods
     def flags_from_raw_flags_data(raw_flags_data)
       return {} if raw_flags_data.nil?
-      flag_objects = ActiveBugzilla::Flag.instantiate_from_raw_data(raw_flags_data)
-      flag_objects.each_with_object({}) do |flag, hash|
-        hash[flag.name] = flag.status
-      end
+      ActiveBugzilla::Flag.instantiate_from_raw_data(raw_flags_data).collect(&:attributes)
     end
   end
 
