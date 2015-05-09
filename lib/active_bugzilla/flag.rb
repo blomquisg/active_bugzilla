@@ -1,6 +1,6 @@
 module ActiveBugzilla
   class Flag < Base
-    attr_reader :active, :bug_id, :created_on, :id, :name, :setter, :status, :type_id, :updated_on
+    attr_reader :active, :bug_id, :created_on, :id, :name, :setter, :requestee, :status, :type_id, :updated_on
     alias_method :active?, :active
 
     def initialize(attributes)
@@ -13,6 +13,7 @@ module ActiveBugzilla
       @name       = attributes['name']
       @setter     = attributes['setter']
       @active     = attributes['is_active']
+      @requestee  = attributes['requestee']
     end
 
     def self.instantiate_from_raw_data(data, bug_id = nil)
